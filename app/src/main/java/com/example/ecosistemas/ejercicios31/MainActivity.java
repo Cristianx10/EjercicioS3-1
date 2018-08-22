@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     publicar = false;
                 }
 
-                String mensaje = "Aqui se vera el IMC"; 
+                String mensaje = "Aqui se vera el IMC";
 
                 if(altura > 0 && masa >= 0 && publicar){
                     float imc = masa/(altura*altura);

@@ -15,30 +15,6 @@
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/logo_icesi" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masa"
-        android:textColorHint="#ccc"
-        android:id="@+id/et_masa"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="#1f4a74"
-        android:padding="10dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Altura"
-        android:textColorHint="#ccc"
-        android:id="@+id/et_altura"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="#1f4a74"
-        android:padding="10dp"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,12 +27,49 @@
         android:id="@+id/tv_informacion"
         />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masa"
+        android:textColorHint="#ccc"
+        android:id="@+id/et_masa"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#1f4a74"
+        android:padding="10dp"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Altura"
+        android:textColorHint="#ccc"
+        android:id="@+id/et_altura"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#1f4a74"
+        android:padding="10dp"
+        android:inputType="number" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calcular"
         android:id="@+id/btn_calcular"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu IMC es:"
+        android:textSize ="12dp"
+        android:padding ="10dp"
+        android:layout_margin="10dp"
+        android:gravity="left"
+        android:textColor="#000"
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -64,12 +77,11 @@
         android:text="Introduce datos para calcular tu IMC"
         android:textSize ="18dp"
         android:padding ="10dp"
-        android:layout_margin="10dp"
+
         android:gravity="center"
         android:textColor="#000"
         android:id="@+id/tv_resultado"
         />
-
 
 
 
