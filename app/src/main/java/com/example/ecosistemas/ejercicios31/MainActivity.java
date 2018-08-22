@@ -19,24 +19,46 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        tv_informacion = findViewById(R.id.tv_informacion);
+        tv_resultado = findViewById(R.id.tv_resultado);
 
-        tv_titulo = findViewById(R.id.tv_titulo);
-        et_nombre = findViewById(R.id.et_nombre);
+        et_masa = findViewById(R.id.et_masa);
+        et_altura = findViewById(R.id.et_altura);
+
         btn_calcular = findViewById(R.id.btn_calcular);
 
 
         btn_calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nombre = et_nombre.getText().toString();
-                if(nombre.equals("Jerry") || nombre.equals("Javier") ) {
-                    tv_informacion.setText("Vos sos un hacker " + nombre);
+
+                String text_masa = et_masa.getText().toString();
+                float masa = Float.parseFloat(text_masa);
+
+                String text_altura = et_masa.getText().toString();
+                float altura = Float.parseFloat(text_masa);
+
+                String mensaje = "Aqui se vera el IMC";
+
+                if(altura > 0 && masa >= 0){
+                    float imc = masa/(altura*altura);
+
+                    mensaje = imc + "";
                 }else{
-                    tv_resultado.setText("Hola " + nombre);
-                    Toast.makeText(MainActivity.this, "Hola " + nombre, Toast.LENGTH_SHORT).show();
-                }  
+                    mensaje = "Por favor ingrese datos validos";
+                }
+
+
+                tv_resultado.setText(mensaje);
+
+                
             }
+
+
+
         });
+
+
 
 
 
