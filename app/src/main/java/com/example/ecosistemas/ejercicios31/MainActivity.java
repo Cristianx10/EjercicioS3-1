@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     tv_resultado.setText("Hola " + nombre);
                     Toast.makeText(MainActivity.this, "Hola " + nombre, Toast.LENGTH_SHORT).show();
-                } 
+                }  
             }
         });
 
