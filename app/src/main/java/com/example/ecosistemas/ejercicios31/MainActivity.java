@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
                 try{
                     masa = Float.parseFloat(text_masa);
-                }catch (Exception ex){
+                }catch (NumberFormatException ex){
                     publicar = false;
                 }
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
                 try{
                     altura = Float.parseFloat(text_altura);
-                }catch (Exception ex){
+                }catch (NumberFormatException ex){
                     publicar = false;
                 }
 
