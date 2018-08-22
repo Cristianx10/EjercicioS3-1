@@ -33,14 +33,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String text_masa = et_masa.getText().toString();
-                float masa = Float.parseFloat(text_masa);
+                float masa = 0;
+                boolean publicar = true;
 
-                String text_altura = et_masa.getText().toString();
-                float altura = Float.parseFloat(text_masa);
+                try{
+                    masa = Float.parseFloat(text_masa);
+                }catch (Exception ex){
+                    publicar = false;
+                }
+
+                String text_altura = et_altura.getText().toString();
+                float altura = 0;
+
+                try{
+                    altura = Float.parseFloat(text_altura);
+                }catch (Exception ex){
+                    publicar = false;
+                }
 
                 String mensaje = "Aqui se vera el IMC";
 
-                if(altura > 0 && masa >= 0){
+                if(altura > 0 && masa >= 0 && publicar){
                     float imc = masa/(altura*altura);
 
                     mensaje = imc + "";
@@ -51,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
                 tv_resultado.setText(mensaje);
 
-                
+
             }
 
 
